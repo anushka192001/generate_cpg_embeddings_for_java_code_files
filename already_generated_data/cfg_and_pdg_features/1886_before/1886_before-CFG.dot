@@ -1,0 +1,10 @@
+digraph 1886_before_CFG {
+  // graph-vertices
+  v1  [label="2:  org.nmdp.gl.client.GlClient create()"];
+  v2  [label="3:  com.google.inject.Injector injector = com.google.inject.Guice.createInjector(new org.nmdp.gl.client.local.LocalGlClient.LocalModule(), new org.nmdp.gl.service.cache.CacheModule(), new org.nmdp.gl.service.id.IdModule())"];
+  v3  [label="4:  return injector.getInstance(org.nmdp.gl.client.GlClient.class);"];
+  // graph-edges
+  v1 -> v2;
+  v2 -> v3;
+  // end-of-graph
+}

@@ -1,0 +1,14 @@
+digraph 3445_before_PDG_DATA {
+  // graph-vertices
+  v1  [label="2:  void saveSettings()"];
+  v2  [label="3:  tagsModel.applyToTags(buildings_tools.ToolSettings.getTags(), false)"];
+  v3  [label="4:  buildings_tools.ToolSettings.saveTags()"];
+  v4  [label="5:  buildings_tools.ToolSettings.setBBMode(cBigMode.isSelected())"];
+  v5  [label="6:  buildings_tools.ToolSettings.setSoftCursor(cSoftCur.isSelected())"];
+  // graph-edges
+  v1 -> v2  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v2 -> v3  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v3 -> v4  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v4 -> v5  [arrowhead=empty, color=gray, style=dashed, label=""];
+  // end-of-graph
+}

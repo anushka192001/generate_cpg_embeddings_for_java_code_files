@@ -1,0 +1,53 @@
+======= LOG CREATED on Thu 2024/Apr/04 12:52:15:608 =======
+
+PROGEX (Program Graph Extractor)  [ v3.4.5 ]
+Visit project website @ https://github.com/ghaffarian/progex
+
+PROGEX execution config:
+  Language = Java
+  Output format = DOT
+  Output directory = /Users/anushkasingh/Desktop/APR_1/code_for_cpg_embedding/output_data/cfg_and_pdg_features/6025_before/
+  Analysis types = [CFG, AST, PDG]
+  Input paths = 
+        /Users/anushkasingh/Desktop/APR_1/code_for_cpg_embedding/output_data/input_dir/6025_before.java
+
+
+# Java source files = 1
+
+
+Control-Flow Analysis
+=====================
+CFG exported to: /Users/anushkasingh/Desktop/APR_1/code_for_cpg_embedding/output_data/cfg_and_pdg_features/6025_before/6025_before-CFG.dot
+
+Abstract Syntax Analysis
+========================
+AST exported to: /Users/anushkasingh/Desktop/APR_1/code_for_cpg_embedding/output_data/cfg_and_pdg_features/6025_before/6025_before-AST.dot
+
+Program-Dependence Analysis
+===========================
+Parsing all source files ... 
+Done.
+
+Extracting class-infos ... 
+Done.
+
+Initializing method-DEF infos ... 
+Done.
+
+Extracting & Parsing imports ... 
+Done.
+
+Analyzing imports DEF-USE ... 
+Done.
+
+Iterative DEF-USE analysis ... 
+Done.
+
+Extracting CFGs ... 
+Done.
+
+Adding data-flow edges ... 
+Done.
+
+CDS of PDG exported to: /Users/anushkasingh/Desktop/APR_1/code_for_cpg_embedding/output_data/cfg_and_pdg_features/6025_before/6025_before-PDG-CTRL.dot
+DDS of PDG exported to: /Users/anushkasingh/Desktop/APR_1/code_for_cpg_embedding/output_data/cfg_and_pdg_features/6025_before/6025_before-PDG-DATA.dot

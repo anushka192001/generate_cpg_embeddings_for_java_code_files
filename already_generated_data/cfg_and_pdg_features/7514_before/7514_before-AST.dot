@@ -1,0 +1,50 @@
+digraph 7514_before_AST {
+  // graph-vertices
+  n1  [label="ROOT: 7514_before.java"];
+  n2  [label="CLASS"];
+  n3  [label="MODIFIER: public"];
+  n4  [label="NAME: Onjoin"];
+  n5  [label="METHOD"];
+  n6  [label="MODIFIER: @java.lang.Override public"];
+  n7  [label="RETURN: void"];
+  n8  [label="NAME: onJoin"];
+  n9  [label="PARAMS"];
+  n10  [label="VAR"];
+  n11  [label="TYPE: org.dclayer.application.networktypeslotmap.NetworkEndpointSlot"];
+  n12  [label="NAME: networkEndpointSlot"];
+  n13  [label="VAR"];
+  n14  [label="TYPE: org.dclayer.net.Data"];
+  n15  [label="NAME: ownAddressData"];
+  n16  [label="BLOCK"];
+  n17  [label="FOR-EACH"];
+  n18  [label="TYPE: org.dclayer.net.Data"];
+  n19  [label="NAME: partner"];
+  n20  [label="IN: org.sblit.configuration.Configuration.getReceivers()"];
+  n21  [label="BLOCK"];
+  n22  [label="5:  java.lang.System.out.println(new java.lang.String(partner.getData()))"];
+  n23  [label="6:  org.sblit.configuration.Configuration.getApp().requestApplicationChannel(networkEndpointSlot, Sblit.APPLICATION_IDENTIFIER, org.sblit.converter.Converter.dataToKey(partner), new org.sblit.filesync.ApplicationChannelActionListener(this))"];
+  // graph-edges
+  n1 -> n2;
+  n2 -> n3;
+  n2 -> n4;
+  n2 -> n5;
+  n5 -> n6;
+  n5 -> n7;
+  n5 -> n8;
+  n5 -> n9;
+  n9 -> n10;
+  n10 -> n11;
+  n10 -> n12;
+  n9 -> n13;
+  n13 -> n14;
+  n13 -> n15;
+  n5 -> n16;
+  n16 -> n17;
+  n17 -> n18;
+  n17 -> n19;
+  n17 -> n20;
+  n17 -> n21;
+  n21 -> n22;
+  n21 -> n23;
+  // end-of-graph
+}

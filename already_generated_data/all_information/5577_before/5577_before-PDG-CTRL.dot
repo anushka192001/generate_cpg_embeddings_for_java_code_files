@@ -1,0 +1,38 @@
+digraph 5577_before_PDG_CTRL {
+  // graph-vertices
+  v1  [label="2:  void main(java.lang.String[] args)"];
+  v2  [label="3:  hu.nytud.hfst.Main m = new hu.nytud.hfst.Main(((args.length) > 0 ? args[0] : 'hfst-wrapper.props'))"];
+  v3  [label="4:  if ((args.length) > 1)"];
+  v4  [label="THEN"];
+  v5  [label="5:  m.dump(args[1])"];
+  v6  [label="6:  java.lang.System.exit(0)"];
+  v7  [label="7:  return ;"];
+  v8  [label="ELSE"];
+  v9  [label="FOLLOW-1"];
+  v10  [label="9:  try"];
+  v11  [label="10:  java.io.BufferedReader is = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in, 'UTF-8'))"];
+  v12  [label="11:  while (true)"];
+  v13  [label="LOOP"];
+  v14  [label="12:  java.lang.String line = is.readLine()"];
+  v15  [label="13:  m.dump(line)"];
+  v16  [label="15:  catch (java.io.IOException e)"];
+  v17  [label="exit"];
+  // graph-edges
+  v1 -> v2;
+  v1 -> v3;
+  v3 -> v4  [label="True"];
+  v4 -> v5;
+  v4 -> v6;
+  v4 -> v7;
+  v3 -> v8  [label="False"];
+  v8 -> v9;
+  v9 -> v10;
+  v10 -> v11;
+  v10 -> v12;
+  v12 -> v13  [label="True"];
+  v13 -> v14;
+  v13 -> v15;
+  v10 -> v16  [label="Throws"];
+  v1 -> v17;
+  // end-of-graph
+}

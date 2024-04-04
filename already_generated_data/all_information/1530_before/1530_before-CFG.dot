@@ -1,0 +1,30 @@
+digraph 1530_before_CFG {
+  // graph-vertices
+  v1  [label="3:  void onResponse(retrofit2.Response<com.example.sidneysmall.finalproject121.response.StatusResponse> cResponse)"];
+  v2  [label="4:  android.util.Log.i('result', cResponse.body().response)"];
+  v3  [label="5:  if (cResponse.body().response.equals('ok'))"];
+  v4  [label="6:  if (cResponse.body().problemInfo.currentStatus.equals('working'))"];
+  v5  [label="7:  findViewById(currentComputerID).setBackgroundResource(R.drawable.greencheck)"];
+  v6  [label="8:  findViewById(currentComputerID).setClickable(true)"];
+  v7  [label="endif"];
+  v8  [label="10:  findViewById(currentComputerID).setBackgroundResource(R.drawable.redx)"];
+  v9  [label="11:  findViewById(currentComputerID).setClickable(false)"];
+  v10  [label="endif"];
+  v11  [label="14:  findViewById(currentComputerID).setBackgroundResource(R.drawable.errorpic)"];
+  v12  [label="15:  findViewById(currentComputerID).setClickable(false)"];
+  // graph-edges
+  v1 -> v2;
+  v2 -> v3;
+  v3 -> v4  [label="True"];
+  v4 -> v5  [label="True"];
+  v5 -> v6;
+  v6 -> v7;
+  v4 -> v8  [label="False"];
+  v8 -> v9;
+  v9 -> v7;
+  v7 -> v10;
+  v3 -> v11  [label="False"];
+  v11 -> v12;
+  v12 -> v10;
+  // end-of-graph
+}

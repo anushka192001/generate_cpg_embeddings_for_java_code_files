@@ -1,0 +1,24 @@
+digraph 3136_before_AST {
+  // graph-vertices
+  n1  [label="ROOT: 3136_before.java"];
+  n2  [label="CLASS"];
+  n3  [label="MODIFIER: public"];
+  n4  [label="NAME: Snapshot"];
+  n5  [label="METHOD"];
+  n6  [label="MODIFIER: private static"];
+  n7  [label="RETURN: net.aeronica.mods.mxtune.status.ClientStateData"];
+  n8  [label="NAME: snapShot"];
+  n9  [label="BLOCK"];
+  n10  [label="3:  return new net.aeronica.mods.mxtune.status.ClientStateData(((net.aeronica.mods.mxtune.util.MIDISystemUtil.midiUnavailable()) == false), ((net.aeronica.mods.mxtune.status.ClientCSDMonitor.gameSettings.getSoundLevel(SoundCategory.MASTER)) > 0.0F), ((net.aeronica.mods.mxtune.status.ClientCSDMonitor.gameSettings.getSoundLevel(ModSounds.SC_MXTUNE)) > 0.0F));"];
+  // graph-edges
+  n1 -> n2;
+  n2 -> n3;
+  n2 -> n4;
+  n2 -> n5;
+  n5 -> n6;
+  n5 -> n7;
+  n5 -> n8;
+  n5 -> n9;
+  n9 -> n10;
+  // end-of-graph
+}

@@ -1,0 +1,12 @@
+digraph 8285_before_PDG_CTRL {
+  // graph-vertices
+  v1  [label="2:  void processSecondSample(double[] secondSample)"];
+  v2  [label="3:  coreSignalProcessing.addSample(secondSample)"];
+  v3  [label="4:  lvls.addAll(coreSignalProcessing.processSamples(1.0))"];
+  v4  [label="exit"];
+  // graph-edges
+  v1 -> v2;
+  v1 -> v3;
+  v1 -> v4;
+  // end-of-graph
+}

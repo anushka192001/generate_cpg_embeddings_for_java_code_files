@@ -1,0 +1,41 @@
+digraph 9097_before_PDG_DATA {
+  // graph-vertices
+  v1  [label="2:  boolean adminUpdatesUserWorkgroup(java.lang.String workgroup_id, java.lang.String uuid)"];
+  v2  [label="3:  boolean success = false"];
+  v3  [label="4:  java.lang.String sqlUpdate = 'UPDATE user SET workgroup_id=? WHERE user_ldap=?'"];
+  v4  [label="5:  try"];
+  v5  [label="5:  java.sql.Connection conn = login()"];
+  v6  [label="5:  java.sql.PreparedStatement statement = conn.prepareStatement(sqlUpdate)"];
+  v7  [label="end-try"];
+  v8  [label="6:  statement.setString(1, workgroup_id)"];
+  v9  [label="7:  statement.setString(2, uuid)"];
+  v10  [label="8:  int result = statement.executeUpdate()"];
+  v11  [label="9:  success = result > 0"];
+  v12  [label="end-catch"];
+  v13  [label="10:  catch (java.sql.SQLException e)"];
+  v14  [label="11:  e.printStackTrace()"];
+  v15  [label="13:  return success;"];
+  // graph-edges
+  v1 -> v2  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v2 -> v3  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v3 -> v4  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v4 -> v5  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v5 -> v6  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v6 -> v8  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v8 -> v9  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v9 -> v10  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v10 -> v11  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v11 -> v7  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v7 -> v13  [arrowhead=empty, color=gray, style=dashed, label="Throws"];
+  v13 -> v14  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v14 -> v12  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v12 -> v7  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v7 -> v15  [arrowhead=empty, color=gray, style=dashed, label=""];
+   v1 -> v8   [style=bold, label=" (workgroup_id)"];
+   v1 -> v9   [style=bold, label=" (uuid)"];
+   v3 -> v6   [style=bold, label=" (sqlUpdate)"];
+   v10 -> v11   [style=bold, label=" (result)"];
+   v11 -> v15   [style=bold, label=" (success)"];
+   v13 -> v14   [style=bold, label=" (e)"];
+  // end-of-graph
+}

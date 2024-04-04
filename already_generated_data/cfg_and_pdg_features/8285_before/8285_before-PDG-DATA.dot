@@ -1,0 +1,11 @@
+digraph 8285_before_PDG_DATA {
+  // graph-vertices
+  v1  [label="2:  void processSecondSample(double[] secondSample)"];
+  v2  [label="3:  coreSignalProcessing.addSample(secondSample)"];
+  v3  [label="4:  lvls.addAll(coreSignalProcessing.processSamples(1.0))"];
+  // graph-edges
+  v1 -> v2  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v2 -> v3  [arrowhead=empty, color=gray, style=dashed, label=""];
+   v1 -> v2   [style=bold, label=" (secondSample)"];
+  // end-of-graph
+}

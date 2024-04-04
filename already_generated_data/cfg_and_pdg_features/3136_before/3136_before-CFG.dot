@@ -1,0 +1,8 @@
+digraph 3136_before_CFG {
+  // graph-vertices
+  v1  [label="2:  net.aeronica.mods.mxtune.status.ClientStateData snapShot()"];
+  v2  [label="3:  return new net.aeronica.mods.mxtune.status.ClientStateData(((net.aeronica.mods.mxtune.util.MIDISystemUtil.midiUnavailable()) == false), ((net.aeronica.mods.mxtune.status.ClientCSDMonitor.gameSettings.getSoundLevel(SoundCategory.MASTER)) > 0.0F), ((net.aeronica.mods.mxtune.status.ClientCSDMonitor.gameSettings.getSoundLevel(ModSounds.SC_MXTUNE)) > 0.0F));"];
+  // graph-edges
+  v1 -> v2;
+  // end-of-graph
+}

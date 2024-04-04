@@ -1,0 +1,18 @@
+digraph 7514_before_PDG_DATA {
+  // graph-vertices
+  v1  [label="3:  void onJoin(org.dclayer.application.networktypeslotmap.NetworkEndpointSlot networkEndpointSlot, org.dclayer.net.Data ownAddressData)"];
+  v2  [label="4:  for (org.dclayer.net.Data partner : org.sblit.configuration.Configuration.getReceivers())"];
+  v3  [label="endfor"];
+  v4  [label="5:  java.lang.System.out.println(new java.lang.String(partner.getData()))"];
+  v5  [label="6:  org.sblit.configuration.Configuration.getApp().requestApplicationChannel(networkEndpointSlot, Sblit.APPLICATION_IDENTIFIER, org.sblit.converter.Converter.dataToKey(partner), new org.sblit.filesync.ApplicationChannelActionListener(this))"];
+  // graph-edges
+  v1 -> v2  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v2 -> v3  [arrowhead=empty, color=gray, style=dashed, label="False"];
+  v2 -> v4  [arrowhead=empty, color=gray, style=dashed, label="True"];
+  v4 -> v5  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v5 -> v2  [arrowhead=empty, color=gray, style=dashed, label=""];
+   v1 -> v5   [style=bold, label=" (networkEndpointSlot)"];
+   v2 -> v4   [style=bold, label=" (partner)"];
+   v2 -> v5   [style=bold, label=" (partner)"];
+  // end-of-graph
+}

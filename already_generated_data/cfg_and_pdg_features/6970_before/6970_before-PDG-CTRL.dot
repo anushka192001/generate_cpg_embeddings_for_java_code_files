@@ -1,0 +1,12 @@
+digraph 6970_before_PDG_CTRL {
+  // graph-vertices
+  v1  [label="3:  void onSuccess(final org.opendaylight.controller.md.sal.dom.api.DOMRpcResult result)"];
+  v2  [label="4:  org.opendaylight.netconf.sal.connect.netconf.sal.KeepaliveSalFacade.LOG.debug('{}: Keepalive RPC successful with response: {}', id, result.getResult())"];
+  v3  [label="5:  scheduleKeepalive()"];
+  v4  [label="exit"];
+  // graph-edges
+  v1 -> v2;
+  v1 -> v3;
+  v1 -> v4;
+  // end-of-graph
+}

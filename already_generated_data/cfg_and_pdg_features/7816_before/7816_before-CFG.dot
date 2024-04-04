@@ -1,0 +1,14 @@
+digraph 7816_before_CFG {
+  // graph-vertices
+  v1  [label="2:  de.uni_stuttgart.iaas.bpel.equivalence.model.pointalgebra.PAVariable createVariable(org.eclipse.emf.ecore.EObject bpelElement, de.uni_stuttgart.iaas.bpel.equivalence.model.TimePointDesc timePoint)"];
+  v2  [label="3:  de.uni_stuttgart.iaas.bpel.equivalence.model.pointalgebra.PAVariable variable = ((de.uni_stuttgart.iaas.bpel.equivalence.model.pointalgebra.PAVariable) (solver.createVariable()))"];
+  v3  [label="4:  variable.setBpelElement(bpelElement)"];
+  v4  [label="5:  variable.setTimePoint(timePoint)"];
+  v5  [label="6:  return variable;"];
+  // graph-edges
+  v1 -> v2;
+  v2 -> v3;
+  v3 -> v4;
+  v4 -> v5;
+  // end-of-graph
+}

@@ -1,0 +1,16 @@
+digraph 6349_before_PDG_CTRL {
+  // graph-vertices
+  v1  [label="2:  void onViewDisappear()"];
+  v2  [label="3:  com.taobao.weex.ui.component.WXComponent comp = getRootCom()"];
+  v3  [label="4:  if (comp != null)"];
+  v4  [label="THEN"];
+  v5  [label="5:  com.taobao.weex.bridge.WXBridgeManager.getInstance().fireEvent(this.mInstanceId, comp.getRef(), WXEventType.VIEWDISAPPEAR, null, null)"];
+  v6  [label="exit"];
+  // graph-edges
+  v1 -> v2;
+  v1 -> v3;
+  v3 -> v4  [label="True"];
+  v4 -> v5;
+  v1 -> v6;
+  // end-of-graph
+}

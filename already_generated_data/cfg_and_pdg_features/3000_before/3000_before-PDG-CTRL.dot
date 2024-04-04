@@ -1,0 +1,56 @@
+digraph 3000_before_PDG_CTRL {
+  // graph-vertices
+  v1  [label="3:  void onItemClick(android.widget.AdapterView<?> parent, android.view.View view, int position, long id)"];
+  v2  [label="4:  android.content.res.Resources res = getResources()"];
+  v3  [label="5:  java.lang.Object obj = getSharedDeckFromList(position)"];
+  v4  [label="6:  if (obj instanceof com.ichi2.anki.SharedDeck)"];
+  v5  [label="THEN"];
+  v6  [label="7:  com.ichi2.anki.SharedDeck selectedDeck = ((com.ichi2.anki.SharedDeck) (obj))"];
+  v7  [label="8:  for (com.ichi2.anki.Download d : mSharedDeckDownloads)"];
+  v8  [label="LOOP"];
+  v9  [label="9:  if (d.getTitle().equals(selectedDeck.getTitle()))"];
+  v10  [label="THEN"];
+  v11  [label="10:  android.widget.Toast duplicateMessage = android.widget.Toast.makeText(this, res.getString(R.string.duplicate_download), Toast.LENGTH_SHORT)"];
+  v12  [label="11:  duplicateMessage.show()"];
+  v13  [label="12:  return ;"];
+  v14  [label="ELSE"];
+  v15  [label="FOLLOW-1"];
+  v16  [label="15:  com.ichi2.anki.SharedDeckDownload sharedDeckDownload = new com.ichi2.anki.SharedDeckDownload(selectedDeck.getId(), selectedDeck.getTitle())"];
+  v17  [label="16:  sharedDeckDownload.setSize(selectedDeck.getSize())"];
+  v18  [label="17:  mSharedDeckDownloads.add(sharedDeckDownload)"];
+  v19  [label="18:  refreshSharedDecksList()"];
+  v20  [label="19:  try"];
+  v21  [label="20:  startService(mDownloadManagerServiceIntent)"];
+  v22  [label="21:  mDownloadManagerService.downloadFile(sharedDeckDownload)"];
+  v23  [label="22:  catch (android.os.RemoteException e)"];
+  v24  [label="23:  android.util.Log.e(AnkiDroidApp.TAG, ('RemoteException = ' + (e.getMessage())))"];
+  v25  [label="24:  e.printStackTrace()"];
+  v26  [label="exit"];
+  // graph-edges
+  v1 -> v2;
+  v1 -> v3;
+  v1 -> v4;
+  v4 -> v5  [label="True"];
+  v5 -> v6;
+  v5 -> v7;
+  v7 -> v8  [label="True"];
+  v8 -> v9;
+  v9 -> v10  [label="True"];
+  v10 -> v11;
+  v10 -> v12;
+  v10 -> v13;
+  v9 -> v14  [label="False"];
+  v14 -> v15;
+  v15 -> v16;
+  v15 -> v17;
+  v15 -> v18;
+  v15 -> v19;
+  v15 -> v20;
+  v20 -> v21;
+  v20 -> v22;
+  v20 -> v23  [label="Throws"];
+  v23 -> v24;
+  v23 -> v25;
+  v1 -> v26;
+  // end-of-graph
+}

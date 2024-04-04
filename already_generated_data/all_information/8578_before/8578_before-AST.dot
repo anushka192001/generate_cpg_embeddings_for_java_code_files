@@ -1,0 +1,38 @@
+digraph 8578_before_AST {
+  // graph-vertices
+  n1  [label="ROOT: 8578_before.java"];
+  n2  [label="CLASS"];
+  n3  [label="MODIFIER: public"];
+  n4  [label="NAME: Deleteconnectionthrottle"];
+  n5  [label="METHOD"];
+  n6  [label="MODIFIER: @java.lang.Override public"];
+  n7  [label="RETURN: void"];
+  n8  [label="NAME: deleteConnectionThrottle"];
+  n9  [label="PARAMS"];
+  n10  [label="VAR"];
+  n11  [label="TYPE: org.openstack.atlas.adapter.LoadBalancerEndpointConfiguration"];
+  n12  [label="NAME: config"];
+  n13  [label="VAR"];
+  n14  [label="TYPE: org.openstack.atlas.adapter.zxtm.LoadBalancer"];
+  n15  [label="NAME: loadBalancer"];
+  n16  [label="BLOCK"];
+  n17  [label="4:  deleteConnectionThrottle(config, loadBalancer, org.openstack.atlas.adapter.helpers.ZxtmNameBuilder.genVSName(loadBalancer))"];
+  // graph-edges
+  n1 -> n2;
+  n2 -> n3;
+  n2 -> n4;
+  n2 -> n5;
+  n5 -> n6;
+  n5 -> n7;
+  n5 -> n8;
+  n5 -> n9;
+  n9 -> n10;
+  n10 -> n11;
+  n10 -> n12;
+  n9 -> n13;
+  n13 -> n14;
+  n13 -> n15;
+  n5 -> n16;
+  n16 -> n17;
+  // end-of-graph
+}

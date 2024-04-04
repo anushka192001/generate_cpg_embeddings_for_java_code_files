@@ -1,0 +1,38 @@
+digraph 2701_before_PDG_CTRL {
+  // graph-vertices
+  v1  [label="2:  void collapse(java.util.Vector coordinate)"];
+  v2  [label="3:  java.util.Vector CubeCoor = new java.util.Vector(coordinate.cubeX(), coordinate.cubeY(), coordinate.cubeZ())"];
+  v3  [label="4:  hillbillies.model.Cube cube = getCube(CubeCoor)"];
+  v4  [label="5:  hillbillies.model.Terrain cubeTerrain = cube.getTerrain()"];
+  v5  [label="6:  if (cubeTerrain == (Terrain.ROCK))"];
+  v6  [label="THEN"];
+  v7  [label="7:  if ((randInt(0, 99)) < 25)"];
+  v8  [label="THEN"];
+  v9  [label="8:  new hillbillies.model.Log(this, cube)"];
+  v10  [label="ELSE"];
+  v11  [label="11:  if (cubeTerrain == (Terrain.WOOD))"];
+  v12  [label="THEN"];
+  v13  [label="12:  if ((randInt(0, 99)) < 25)"];
+  v14  [label="THEN"];
+  v15  [label="13:  new hillbillies.model.Boulder(this, cube)"];
+  v16  [label="17:  cube.setTerrain(Terrain.AIR)"];
+  v17  [label="exit"];
+  // graph-edges
+  v1 -> v2;
+  v1 -> v3;
+  v1 -> v4;
+  v1 -> v5;
+  v5 -> v6  [label="True"];
+  v6 -> v7;
+  v7 -> v8  [label="True"];
+  v8 -> v9;
+  v5 -> v10  [label="False"];
+  v10 -> v11;
+  v11 -> v12  [label="True"];
+  v12 -> v13;
+  v13 -> v14  [label="True"];
+  v14 -> v15;
+  v1 -> v16;
+  v1 -> v17;
+  // end-of-graph
+}

@@ -1,0 +1,10 @@
+digraph 8578_before_PDG_DATA {
+  // graph-vertices
+  v1  [label="3:  void deleteConnectionThrottle(org.openstack.atlas.adapter.LoadBalancerEndpointConfiguration config, org.openstack.atlas.adapter.zxtm.LoadBalancer loadBalancer)"];
+  v2  [label="4:  deleteConnectionThrottle(config, loadBalancer, org.openstack.atlas.adapter.helpers.ZxtmNameBuilder.genVSName(loadBalancer))"];
+  // graph-edges
+  v1 -> v2  [arrowhead=empty, color=gray, style=dashed, label=""];
+   v1 -> v2   [style=bold, label=" (loadBalancer)"];
+   v1 -> v2   [style=bold, label=" (config)"];
+  // end-of-graph
+}

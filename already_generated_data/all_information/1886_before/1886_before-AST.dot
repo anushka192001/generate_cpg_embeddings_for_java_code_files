@@ -1,0 +1,32 @@
+digraph 1886_before_AST {
+  // graph-vertices
+  n1  [label="ROOT: 1886_before.java"];
+  n2  [label="CLASS"];
+  n3  [label="MODIFIER: public"];
+  n4  [label="NAME: Create"];
+  n5  [label="METHOD"];
+  n6  [label="MODIFIER: public static"];
+  n7  [label="RETURN: org.nmdp.gl.client.GlClient"];
+  n8  [label="NAME: create"];
+  n9  [label="BLOCK"];
+  n10  [label="VAR"];
+  n11  [label="TYPE: com.google.inject.Injector"];
+  n12  [label="NAME: injector"];
+  n13  [label="INIT: = com.google.inject.Guice.createInjector(new org.nmdp.gl.client.local.LocalGlClient.LocalModule(), new org.nmdp.gl.service.cache.CacheModule(), new org.nmdp.gl.service.id.IdModule())"];
+  n14  [label="4:  return injector.getInstance(org.nmdp.gl.client.GlClient.class);"];
+  // graph-edges
+  n1 -> n2;
+  n2 -> n3;
+  n2 -> n4;
+  n2 -> n5;
+  n5 -> n6;
+  n5 -> n7;
+  n5 -> n8;
+  n5 -> n9;
+  n9 -> n10;
+  n10 -> n11;
+  n10 -> n12;
+  n10 -> n13;
+  n9 -> n14;
+  // end-of-graph
+}

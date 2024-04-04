@@ -1,0 +1,46 @@
+digraph 2701_before_PDG_DATA {
+  // graph-vertices
+  v1  [label="2:  void collapse(java.util.Vector coordinate)"];
+  v2  [label="3:  java.util.Vector CubeCoor = new java.util.Vector(coordinate.cubeX(), coordinate.cubeY(), coordinate.cubeZ())"];
+  v3  [label="4:  hillbillies.model.Cube cube = getCube(CubeCoor)"];
+  v4  [label="5:  hillbillies.model.Terrain cubeTerrain = cube.getTerrain()"];
+  v5  [label="6:  if (cubeTerrain == (Terrain.ROCK))"];
+  v6  [label="7:  if ((randInt(0, 99)) < 25)"];
+  v7  [label="8:  new hillbillies.model.Log(this, cube)"];
+  v8  [label="endif"];
+  v9  [label="endif"];
+  v10  [label="11:  if (cubeTerrain == (Terrain.WOOD))"];
+  v11  [label="12:  if ((randInt(0, 99)) < 25)"];
+  v12  [label="13:  new hillbillies.model.Boulder(this, cube)"];
+  v13  [label="endif"];
+  v14  [label="endif"];
+  v15  [label="17:  cube.setTerrain(Terrain.AIR)"];
+  // graph-edges
+  v1 -> v2  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v2 -> v3  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v3 -> v4  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v4 -> v5  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v5 -> v6  [arrowhead=empty, color=gray, style=dashed, label="True"];
+  v6 -> v7  [arrowhead=empty, color=gray, style=dashed, label="True"];
+  v7 -> v8  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v6 -> v8  [arrowhead=empty, color=gray, style=dashed, label="False"];
+  v8 -> v9  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v5 -> v10  [arrowhead=empty, color=gray, style=dashed, label="False"];
+  v10 -> v11  [arrowhead=empty, color=gray, style=dashed, label="True"];
+  v11 -> v12  [arrowhead=empty, color=gray, style=dashed, label="True"];
+  v12 -> v13  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v11 -> v13  [arrowhead=empty, color=gray, style=dashed, label="False"];
+  v13 -> v14  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v10 -> v14  [arrowhead=empty, color=gray, style=dashed, label="False"];
+  v14 -> v9  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v9 -> v15  [arrowhead=empty, color=gray, style=dashed, label=""];
+   v1 -> v2   [style=bold, label=" (coordinate)"];
+   v2 -> v3   [style=bold, label=" (CubeCoor)"];
+   v3 -> v4   [style=bold, label=" (cube)"];
+   v3 -> v15   [style=bold, label=" (cube)"];
+   v3 -> v12   [style=bold, label=" (cube)"];
+   v3 -> v7   [style=bold, label=" (cube)"];
+   v4 -> v5   [style=bold, label=" (cubeTerrain)"];
+   v4 -> v10   [style=bold, label=" (cubeTerrain)"];
+  // end-of-graph
+}

@@ -1,0 +1,32 @@
+digraph 9097_before_PDG_CTRL {
+  // graph-vertices
+  v1  [label="2:  boolean adminUpdatesUserWorkgroup(java.lang.String workgroup_id, java.lang.String uuid)"];
+  v2  [label="3:  boolean success = false"];
+  v3  [label="4:  java.lang.String sqlUpdate = 'UPDATE user SET workgroup_id=? WHERE user_ldap=?'"];
+  v4  [label="5:  try"];
+  v5  [label="5:  java.sql.Connection conn = login()"];
+  v6  [label="5:  java.sql.PreparedStatement statement = conn.prepareStatement(sqlUpdate)"];
+  v7  [label="6:  statement.setString(1, workgroup_id)"];
+  v8  [label="7:  statement.setString(2, uuid)"];
+  v9  [label="8:  int result = statement.executeUpdate()"];
+  v10  [label="9:  success = result > 0"];
+  v11  [label="10:  catch (java.sql.SQLException e)"];
+  v12  [label="11:  e.printStackTrace()"];
+  v13  [label="13:  return success;"];
+  v14  [label="exit"];
+  // graph-edges
+  v1 -> v2;
+  v1 -> v3;
+  v1 -> v4;
+  v4 -> v5;
+  v4 -> v6;
+  v4 -> v7;
+  v4 -> v8;
+  v4 -> v9;
+  v4 -> v10;
+  v4 -> v11  [label="Throws"];
+  v11 -> v12;
+  v1 -> v13;
+  v1 -> v14;
+  // end-of-graph
+}

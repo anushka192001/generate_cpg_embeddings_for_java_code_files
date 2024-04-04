@@ -1,0 +1,15 @@
+digraph 7514_before_CFG {
+  // graph-vertices
+  v1  [label="3:  void onJoin(org.dclayer.application.networktypeslotmap.NetworkEndpointSlot networkEndpointSlot, org.dclayer.net.Data ownAddressData)"];
+  v2  [label="4:  for (org.dclayer.net.Data partner : org.sblit.configuration.Configuration.getReceivers())"];
+  v3  [label="endfor"];
+  v4  [label="5:  java.lang.System.out.println(new java.lang.String(partner.getData()))"];
+  v5  [label="6:  org.sblit.configuration.Configuration.getApp().requestApplicationChannel(networkEndpointSlot, Sblit.APPLICATION_IDENTIFIER, org.sblit.converter.Converter.dataToKey(partner), new org.sblit.filesync.ApplicationChannelActionListener(this))"];
+  // graph-edges
+  v1 -> v2;
+  v2 -> v3  [label="False"];
+  v2 -> v4  [label="True"];
+  v4 -> v5;
+  v5 -> v2;
+  // end-of-graph
+}

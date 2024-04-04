@@ -1,0 +1,35 @@
+digraph 7785_before_PDG_DATA {
+  // graph-vertices
+  v1  [label="2:  boolean hasFallingPieces(final java.util.List<com.gamesbykevin.yoshi.board.piece.Piece> pieces)"];
+  v2  [label="3:  int i = 0"];
+  v3  [label="3:  for (i < (pieces.size()))"];
+  v4  [label="3:  i++"];
+  v5  [label="endfor"];
+  v6  [label="4:  final com.gamesbykevin.yoshi.board.piece.Piece piece = pieces.get(i)"];
+  v7  [label="5:  if ((((piece.isPlaced()) || (piece.isYoshi())) || (piece.isDestroyed())) || (piece.isFrozen()))"];
+  v8  [label="6:  continue;"];
+  v9  [label="endif"];
+  v10  [label="8:  return true;"];
+  v11  [label="10:  return false;"];
+  // graph-edges
+  v1 -> v2  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v2 -> v3  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v3 -> v5  [arrowhead=empty, color=gray, style=dashed, label="False"];
+  v3 -> v6  [arrowhead=empty, color=gray, style=dashed, label="True"];
+  v6 -> v7  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v7 -> v8  [arrowhead=empty, color=gray, style=dashed, label="True"];
+  v8 -> v4  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v7 -> v9  [arrowhead=empty, color=gray, style=dashed, label="False"];
+  v9 -> v10  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v4 -> v3  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v5 -> v11  [arrowhead=empty, color=gray, style=dashed, label=""];
+   v1 -> v3   [style=bold, label=" (pieces)"];
+   v1 -> v6   [style=bold, label=" (pieces)"];
+   v2 -> v3   [style=bold, label=" (i)"];
+   v2 -> v6   [style=bold, label=" (i)"];
+   v2 -> v4   [style=bold, label=" (i)"];
+   v6 -> v7   [style=bold, label=" (piece)"];
+   v4 -> v3   [style=bold, label=" (i)"];
+   v4 -> v6   [style=bold, label=" (i)"];
+  // end-of-graph
+}

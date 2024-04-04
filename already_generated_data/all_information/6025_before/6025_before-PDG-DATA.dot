@@ -1,0 +1,42 @@
+digraph 6025_before_PDG_DATA {
+  // graph-vertices
+  v1  [label="2:  void initData(controller.Controller c, java.lang.String[] Employees)"];
+  v2  [label="3:  this.c = c"];
+  v3  [label="4:  this.c.addWorkingTime('0', '26/04/2017', '10:00', '11:00')"];
+  v4  [label="5:  if ((Employees[0]) != null)"];
+  v5  [label="6:  int i = 0"];
+  v6  [label="6:  for (i < (Employees.length))"];
+  v7  [label="6:  i++"];
+  v8  [label="endfor"];
+  v9  [label="7:  employeeList.getItems().addAll(Employees[i])"];
+  v10  [label="endif"];
+  v11  [label="10:  week.getItems().addAll('Past Week')"];
+  v12  [label="11:  week.getItems().addAll('Current Week')"];
+  v13  [label="12:  week.getItems().addAll('Next Week')"];
+  v14  [label="13:  tableView.getColumns().clear()"];
+  // graph-edges
+  v1 -> v2  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v2 -> v3  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v3 -> v4  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v4 -> v5  [arrowhead=empty, color=gray, style=dashed, label="True"];
+  v5 -> v6  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v6 -> v8  [arrowhead=empty, color=gray, style=dashed, label="False"];
+  v6 -> v9  [arrowhead=empty, color=gray, style=dashed, label="True"];
+  v9 -> v7  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v7 -> v6  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v8 -> v10  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v4 -> v10  [arrowhead=empty, color=gray, style=dashed, label="False"];
+  v10 -> v11  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v11 -> v12  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v12 -> v13  [arrowhead=empty, color=gray, style=dashed, label=""];
+  v13 -> v14  [arrowhead=empty, color=gray, style=dashed, label=""];
+   v1 -> v2   [style=bold, label=" (c)"];
+   v1 -> v4   [style=bold, label=" (Employees)"];
+   v1 -> v9   [style=bold, label=" (Employees)"];
+   v5 -> v6   [style=bold, label=" (i)"];
+   v5 -> v9   [style=bold, label=" (i)"];
+   v5 -> v7   [style=bold, label=" (i)"];
+   v7 -> v6   [style=bold, label=" (i)"];
+   v7 -> v9   [style=bold, label=" (i)"];
+  // end-of-graph
+}

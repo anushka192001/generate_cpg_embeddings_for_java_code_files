@@ -1,0 +1,21 @@
+digraph 7850_before_CFG {
+  // graph-vertices
+  v1  [label="3:  net.minecraft.item.ItemStack activeUse(net.minecraft.item.ItemStack stackIn, net.minecraft.world.World world, net.minecraft.entity.player.EntityPlayer player, net.minecraft.util.EnumHand hand, int strength)"];
+  v2  [label="4:  net.minecraft.util.math.RayTraceResult result = player.rayTrace(10, 1)"];
+  v3  [label="5:  net.minecraft.entity.Entity target = result.entityHit"];
+  v4  [label="6:  net.minecraft.entity.passive.EntityVillager villager = new net.minecraft.entity.passive.EntityVillager(world)"];
+  v5  [label="7:  if (target instanceof net.minecraft.entity.monster.EntityZombie)"];
+  v6  [label="8:  java.lang.System.out.println('Hit the if *******************')"];
+  v7  [label="endif"];
+  v8  [label="10:  return super.activeUse(stackIn, world, player, hand, strength);"];
+  // graph-edges
+  v1 -> v2;
+  v2 -> v3;
+  v3 -> v4;
+  v4 -> v5;
+  v5 -> v6  [label="True"];
+  v6 -> v7;
+  v5 -> v7  [label="False"];
+  v7 -> v8;
+  // end-of-graph
+}
