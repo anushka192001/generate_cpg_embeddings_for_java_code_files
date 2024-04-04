@@ -16,7 +16,7 @@ embeddings.pt: contains final cpg embeddings of each java file
 
 
 
-Steps—
+follow theseSteps to get the cpg embeddings—
 1. Update the base paths in scripts:
 base path = where you have downloaded this repository
 a.) in (code_for_cpg_embeddings->modify_java_files.py) update your base_path
